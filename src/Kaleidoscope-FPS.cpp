@@ -6,7 +6,7 @@
 byte FPS_::row = 255, FPS_::col = 255;
 uint8_t FPS_::FPSLayer;
 cRGB FPS_color = CRGB(0, 160, 0);
-cRGB off_color = CRGB(0, 160, 0);
+cRGB off_color = CRGB(0, 0, 0);
 
 FPS_::FPS_(void) {
 }
