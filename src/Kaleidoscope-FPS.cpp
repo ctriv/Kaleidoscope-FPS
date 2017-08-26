@@ -10,8 +10,8 @@ cRGB basic_movement_color = CRGB(200, 0, 0);
 cRGB movement_modifier_color = CRGB(0, 150, 0);
 cRGB actions_color = CRGB(0, 0, 200);
 cRGB meta_color = CRGB(100, 0, 100);
-cRGB toggle_color = CRGB(140, 70, 0);
-cRGB weapon_color = CRGB(100, 100, 100);
+cRGB toggle_color = CRGB(100, 100, 100);
+cRGB weapon_color = CRGB(140, 100, 20);
 cRGB off_color = CRGB(0, 0, 0);
 
 FPS_::FPS_(void) {
