@@ -25,7 +25,7 @@
 
 #define Key_FPS_console Key_Backtick
 #define Key_FPS_board   Key_Tab
-
+#define Key_FPS_last_wp Key_Q
 
 class FPS_ : public KaleidoscopePlugin {
  public:

@@ -27,8 +27,6 @@ void FPS_::loopHook(bool postClear) {
 
   for (uint8_t r = 0; r < ROWS; r++) {
     for (uint8_t c = 0; c < COLS; c++) {
-      //Key k = Layer.lookupOnActiveLayer(r, c);
-      //Key layer_key = Layer.getKey(FPSLayer, r, c);
       Key k = Layer.getKey(FPSLayer, r, c);
 
       if ((k == Key_FPS_fwd) || (k == Key_FPS_bkwds) || (k == Key_FPS_left) || (k == Key_FPS_right)) {
@@ -37,7 +35,7 @@ void FPS_::loopHook(bool postClear) {
       else if ((k == Key_FPS_crouch) || (k == Key_FPS_run) || (k == Key_FPS_jump)|| (k == Key_FPS_walk)) {
           LEDControl.setCrgbAt(r, c, movement_modifier_color);
       }
-      else if ((k == Key_FPS_use1) || (k == Key_FPS_use2) || (k == Key_FPS_use3) || (k == Key_FPS_reload) || (k == Key_FPS_zoom)) {
+      else if ((k == Key_FPS_use1) || (k == Key_FPS_use2) || (k == Key_FPS_use3) || (k == Key_FPS_zoom)) {
           LEDControl.setCrgbAt(r, c, actions_color);
       }
       else if ((k == Key_FPS_console) || (k == Key_FPS_board)) {
@@ -46,7 +44,7 @@ void FPS_::loopHook(bool postClear) {
       else if ((k == Key_ToggleFPS)) {
           LEDControl.setCrgbAt(r, c, toggle_color);
       }
-      else if ((Key_1 <= k) && (k <= Key_0)) {
+      else if (((Key_1 <= k) && (k <= Key_0)) || (k == Key_FPS_last_wp) || (k == Key_FPS_reload)) {
           LEDControl.setCrgbAt(r, c, weapon_color);
       }
       else {
